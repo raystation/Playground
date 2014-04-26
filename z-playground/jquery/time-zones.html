@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>time-zones</title>
+</head>
+<body>
+	<p>hello</p>
+	
+	<script src="jquery-1.9.1.js"></script>
+	<script>
+
+		var d = new Date()
+		var n = d.getTimezoneOffset()/60;
+		console.log("offset by " + n + " hours.");
+
+		var hour, minutes;
+
+		function hourFind( ) {
+			var hour = new Date().getHours();
+			if ( hour == 0 ) { 
+				hour = 12;
+			}
+			else if ( hour > 12 ) { 
+				hour = hour-12;
+				return hour; 
+			}
+			else {
+				return hour;
+			}
+		}
+
+		// console.log( "time: " + hourFind() + ":" + minuteFind() );
+
+		function minuteFind( minutes ) {
+			var minutes = new Date().getMinutes();
+			if ( minutes < 10 ) {
+				minutes = "0"+ minutes;
+				return minutes;
+			} else {
+				return minutes;
+			}
+		}
+
+		function getTime() {
+			console.log( "hour: " + hourFind( hour ) );
+			setTimeout(function(){getTime()},500);
+		}
+
+
+
+	</script>
+</body>
+</html>

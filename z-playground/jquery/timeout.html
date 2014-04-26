@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function timeout() {
+		console.log('test');
+		t=setTimeout(function(){timeout()},1000);
+	}
+
+</script>
+</head>
+
+<body onload="timeout()">
+<div id="txt"></div>
+</body>
+</html>

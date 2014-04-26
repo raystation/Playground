@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>fuck</title>
+	<style>
+
+		#message {
+			background-color: yellow;
+			padding: 40px;
+			display: block;
+			width: 300px;
+			margin: 0 px;
+
+		}
+		
+	</style>
+</head>
+
+<body>
+
+	<div id="message">
+		<h1>I'm a message.</h1>
+	</div>
+
+
+	<script src="jquery-1.9.1.js"></script>
+	
+	<script>
+		console.log('script start');
+		// setInterval(function(){alert("Hello")},3000);
+		setInterval(function(){hideShow()},3000);
+		
+		function hideShow() {
+			$( "#message" ).fadeOut( 'slow' ).fadeIn( "slow" );
+		}
+		console.log('script end');
+
+	</script>
+
+</body>
+
+</html>

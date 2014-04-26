@@ -1,0 +1,36 @@
+
+$bkg-color: lightyellow;
+$font-color: black;
+
+body {
+	background-color: $bkg-color;
+	font-style: 16px;
+	font-color: $font-color;
+}
+
+a, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: $font-color;
+	&:hover { text-decoration: underline; }
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}	
+
+hr.bottom {
+	margin-top: 4em;
+}
+
+.container {
+	font-family: Menlo;
+	margin: 0 auto;
+	padding: 20px;
+	width: 80%;
+	max-width: 700px;
+	font-family: Courier,serif;
+	line-height: 1em;
+
+}
+

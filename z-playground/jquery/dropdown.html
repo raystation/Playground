@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>dropdown</title>
+	<style>
+
+		.container {
+			/*position: relative;*/
+		}
+
+		h2 {
+			background-color: silver;
+			color: black;
+			padding: 10px;
+		}		
+
+		.hidden {
+			display: none;
+		}
+
+
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<h2>title</h2>
+		<div class="content hidden">
+			<img src="http://placehold.it/600x400&text=test">
+		</div>
+	</div>
+	<div class="container">
+		<h2>title</h2>
+		<div class="content hidden">
+			<img src="http://placehold.it/600x400&text=test">
+		</div>
+	</div>
+	<script src="jquery-1.9.1.js"></script>
+	
+	<script>
+		console.log('script start');
+
+			$("h2").click(function() {
+				$(this).next().toggleClass('hidden');
+		  });
+
+		console.log('script end');
+
+	</script>
+
+</body>
+
+</html>
