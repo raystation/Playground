@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>canvas template</title>
+		
+		<script>
+
+			function drawoncanvas() {
+
+				var canvas = document.getelementbyid("canvas_1");
+
+				if (canvas.getcontext){
+					var canvas_context = canvas.getcontext("2d");
+					
+				}
+
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<section style="border-style: solid; border-width: 2px; width: 500px;">
+
+			<canvas width="400" height="400" id="canvas_1">
+				canvas tag not supported
+			</canvas>
+
+		</section>
+
+		<p>
+			<input type ="button" value="  draw  " onclick="drawoncanvas()">
+		</p>
+
+
+	</body>
+
+</html>

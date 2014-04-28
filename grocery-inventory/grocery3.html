@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grocery/Inventory</title>
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		
+		<!-- shopping list -->
+		<div class="shoppingList">
+			<h1>shopping list</h1>
+			<ul>
+				<li id="add-shopping-list">+</li>
+			</ul>
+		</div>
+		
+		<!-- inventory -->
+		<div class="inventory">
+			<h1>inventory</h1>
+			<ul>
+				<li id="add-inventory-list">+</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="refreshButton">refresh</div>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script>
+		console.clear();
+		console.log("creating list...");
+
+		//variables for + button ids
+		var $plusShoppingList = "#add-shopping-list";
+		var $plusInventoryList = "#add-inventory-list";
+
+		// shopping list array
+		var shoppingList = [ "eggs", "milk"];
+
+		// inventory list array
+		var inventory = [ "spinach", "corn"];
+
+		// // populates lists based on arrays
+		function listPopulate( list, listID ) { 	
+			for ( var i = 0; i < list.length; i++ ) {
+    		listAdd( listID, list[i] );
+				// if ( list == shoppingList ) $(listID).before("<li class='item'>" + list[i] + "</li>");
+				// else $(listID).before("<li>" + list[i] + "</li>");
+		}}
+
+		//outdated - add items to lists
+		function listAdd( listID, item ) {
+			// $(listID).before("<li>" + item + "</li>");
+			$(listID).before("<li class='item'>" + item + "</li>");
+		}
+
+		function listRefresh() {
+			refresh();
+			listPopulate( shoppingList, $plusShoppingList );
+			listPopulate( inventory, $plusInventoryList );
+		}
+
+		//remove everything except plus button 
+		function refresh() {
+			$('.item').hide().fadeIn('slow');
+		}
+
+		listRefresh();
+
+		// //manual refresh button
+		// $('.refreshButton').click( function() {
+		// 	listRefresh();
+		// });
+
+		//removes item from shopping list on click
+		$('.shoppingList li.item').click( function() {
+			console.log( 'clicked' );
+			
+			//pulls text of li that is clicked
+			var itemMove = $(this).text();
+			//adds to inventory
+			inventory.push( itemMove );
+
+			//finds out what number in the array it is
+			var arrayRemove = shoppingList.indexOf(itemMove);
+			console.log( itemMove + ". number of item in array: " + arrayRemove );
+
+			//removes it from the array
+			// shoppingList.splice( arrayRemove, 1 );
+
+			console.log( 'inventory: ' + inventory );
+
+			listRefresh();
+
+		});
+
+		console.log("ready.");
+
+	</script>
+
+</body>
+</html>

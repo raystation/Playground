@@ -1,0 +1,2 @@
+
+$( "#message" ).hide().fadeIn( "slow" );

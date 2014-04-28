@@ -1,0 +1,193 @@
+
+// VARIABLES ==================================================
+
+$sitewidth: 80%;
+$bkgcolor: white;
+$text-color: darken($bkgcolor,50%);
+$link-color: darken($text-color, 20%);
+$navcolor: rgba(black, 0.75);
+
+$bp-960: 								"only screen and (max-width: 959px)";
+$bp-tablet-portrait: 		"only screen and (min-width: 768px) and (max-width: 959px)";
+$bp-mobile: 						"only screen and (max-width: 767px)";
+$bp-mobile-landscape: 	"only screen and (min-width: 480px) and (max-width: 767px)";
+$bp-mobile-portrait:		"only screen and (max-width: 479px)";
+$bp-large:							"only screen and (min-width: 960px)";
+
+
+// INCLUDES ==================================================
+
+@import 'bourbon/bourbon';
+@import 'sass/responsive-indicator';
+
+// MIXINS ==================================================
+
+@mixin clear {
+	padding: 0px;
+	margin: 0px;
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow: 0 1px 0 rgba(white, $opacity) , inset 0 1px 0 rgba(black, $opacity2) ;
+}
+
+@mixin letterpress($opacity){ //font color should be a dark color
+    text-shadow: 0 1px 0 rgba(white, $opacity);
+}
+
+@mixin navigation-list {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  > li{
+      display:block;
+      float:left;
+      &:last-child{
+          margin-right:0px;
+      }
+  }
+}
+
+@mixin visible {
+	background-color: silver;
+}
+
+@mixin center {
+	text-align: center;
+}
+
+/* MAIN STYLES
+================================================== */
+
+body {
+	background: $bkgcolor;
+	color: $text-color;
+	font-family: $georgia;
+	font-size: 27px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	a { font-size: inherit; }
+}
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+	font-size: 14px;
+}
+
+ul, li {
+	list-style: none;
+	@include clear;
+}	
+
+.container {
+	width: $sitewidth;
+	max-width: 600px;
+	margin: 0 auto;
+
+	p {
+		line-height: 1.35em;
+		@media #{$bp-mobile} {
+			font-size: .75em;
+		}
+	}
+}
+
+nav {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	background-color: $navcolor;	
+	padding: 1em 0em;
+	color: white;
+	font-family: Helvetica, sans-serif;
+	font-size: .65em;
+
+	@media #{$bp-mobile} {
+		@include center;		
+	}
+
+	ul, ul li { 
+		display: inline-block;
+		@media #{$bp-mobile} {
+			display: none;
+		}
+	}	
+
+	logo { 
+		font-weight: 900; 
+		margin-right: 2em;
+
+		> a { 
+			color: white; 
+			text-decoration: none; 
+
+			@media #{$bp-mobile} {
+				font-size: 1.25rem;
+			}
+		}
+	} 
+}
+
+/* CHOICE STYLES
+================================================== */
+
+.choice {
+	font-family: $verdana;
+	font-size: .5em;
+	li { 	
+		margin: 3px 0;
+	  color: $link-color;
+	  padding: .25em 0 .35em 0;
+		background-color: lighten(lightblue,10%);
+	  @include transition(background-color,1s);
+	  &:hover { 
+	  	background-color: lightblue;
+	  	@include transition(background-color,1s);}
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 14px;
+			&:hover {}
+	}
+}
+
+.the-end {
+	text-align: center;
+	font-weight: 800;
+	font-size: 130%;
+
+}
+
+/* ATTRIBUTE OPTIONS
+==================================================*/
+
+.center { text-align: center; }
+.visible { background-color: silver; }
+
+
+/* DEBUG WINDOW
+================================================== */
+
+.debug {
+	position: fixed;
+
+	width: 10%;
+	height: 20px;
+	color: tomato;
+
+	font-family: Verdana, sans-serif;
+	font-size: .45em;
+
+	color: red;
+	font-size: 15px;
+	width: 60%;
+  top: inherit; bottom: 10px; left: 0; right: 0; margin-left: auto; margin-right: auto; 
+  @include center;
+
+
+}
+
+// FIXES ==================================================

@@ -1,0 +1,61 @@
+
+@import 'bourbon/bourbon';
+
+* {
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; 
+}
+
+body {
+	background-color: silver;
+	padding-top: 20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	width: 60%;
+	max-width: 300px;
+	padding: 1em;
+	margin: 0 auto;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+
+ul, li {
+	color: white;
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	background-color: orange;
+	color: black;
+	margin: 4px 0;
+	padding: 5px 0;
+
+	&:hover {
+		background-color: darken(orange, 10%);
+	}
+}
+
+#id-inventory-list, #id-shopping-list {
+	background-color: white;
+	&:hover {
+		background-color: silver;
+	};
+}
+
+.refreshButton {
+	position: absolute;
+	top: 10px;
+	left: 5px;
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+

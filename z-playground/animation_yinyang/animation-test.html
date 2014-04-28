@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title></title>
+	<style>
+
+		body {
+			padding-top: 50px;
+			background-color: silver;
+		}
+
+		.yinyang {
+			display: block;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: auto;
+			margin-top: auto;
+
+			height: 10em;
+			width: 10em;
+
+			/*-webkit-animation: rolly 2s ease-in-out infinite;*/
+			/*-webkit-animation: rolly 2s linear infinite;*/
+			-webkit-animation: rolly 2s infinite;
+
+			}
+
+		@-webkit-keyframes rolly {
+			0% 	 	{}
+			100%	{ -webkit-transform: rotate(360deg);}
+		}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<div class="yinyang">
+		<img src="yinyang.svg" style="width: 100%;">
+	</div>
+
+</body>
+
+</html>
