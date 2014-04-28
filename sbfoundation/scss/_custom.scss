@@ -1,0 +1,27 @@
+
+$txt-color: white;
+$bkg-color: lighten(black,20%);
+
+body {
+	background-color: $bkg-color;
+	color: $txt-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $txt-color;
+}
+
+.scale-with-grid {
+	height: auto;
+	width: 100%;
+}
+
+// Logo 
+
+.logo {
+	// width: 40%;
+}
+
+@-webkit-keyframes dangle {
+  50% {
+    -webkit-transform: translate(0, -10px); } }
