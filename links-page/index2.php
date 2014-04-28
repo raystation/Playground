@@ -1,1 +1,0 @@
-<!DOCTYPE html><html><head><title>Ray: PHP Test</title><link rel="stylesheet" type="text/css" href="stylesheet.css"></head><body>    <?php  echo mommmmy;$date = 5;echo $date;$date = $date + 5;?>    </body></html>
