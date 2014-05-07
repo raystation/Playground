@@ -1,9 +1,6 @@
-
-# loop do
-# 	number=rand(1..20).to_i
-# 	puts number
-# 	break if number == 10
-# end
+# MAGIC 8 BALL
+# will randomly choose a number depending on the number of items in the array, and prints it to the screen. 
+# loops until you say exit
 
 fortunes = [
 	"The tides are turning...",
@@ -16,6 +13,9 @@ fortunes = [
 	"que?",
 	"the burro never kicks the burrito.",
 	"the heart is open 24/7",
+	"Long absent, soon forgotten.",
+	"Two in distress makes sorrow less.",
+	"Beware the 20th mile.",
 ]
 count=fortunes.length
 
