@@ -1,0 +1,21 @@
+<div style="margin-top:30px;" class="container">
+  <div class="sixteen columns">
+
+    <h3>R.tweets</h3>
+    <hr>
+    <button type="button"><%= link_to 'New Status', new_status_path %></button>    
+  </div>
+    
+    <% @statuses.reverse.each do |status| %>
+      <div class="sixteen columns status add-bottom">
+        <p>
+          <strong><%= status.name %>: </strong><%= status.content %>
+        </p>
+        <%= link_to 'Show', status %>
+        <%= link_to 'Edit', edit_status_path(status) %>
+        <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <br>
+</div>
