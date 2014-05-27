@@ -9,9 +9,14 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
+    <header class="row">
+      <nav class="small-12 columns">
         <h1>rayuen.com</h1>
-      </div>
-    </div>
+          <ul>
+            <li><a href="work">work</a></li>
+            <li>•</li>
+            <li><a href="about">about</a></li>
+          </ul>
+      </nav>
+    </header>
     

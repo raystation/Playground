@@ -1,24 +1,26 @@
 <?php include 'inc/header.php';?>
 <?php //workthumb() ;?>
-
 <?php 
-echo '<div class="row">';
+	echo "\t".'<div class="row center">'."\n";
+	
+	$count = count( $works );
+	$manual = 0;
 
-foreach($works as $work) {
+	foreach( $works as $work ) {
+		$manual = $manual + 1;
 
-    //check to see if the count is divisible by 4 with no modulo
-    // $test = $count / 4;
+	  if ( $count == $manual ) {
+	  	echo "\t\t".'<div class="small-6 columns medium-3 portfolio-piece end"><img src="img/'.$work["path"].'/'.$work["thumb"].'"><p>'.$work["name"].'</p></div>'."\n";
+	  } else {
+	  	echo "\t\t".'<div class="small-6 columns medium-3 portfolio-piece"><img src="img/'.$work["path"].'/'.$work["thumb"].'"><p>'.$work["name"].'</p></div>'."\n";
+	  }
+		if ( $manual % 4 == 0 ) {
+			echo "\t"."</div>\n\t<div class=\"row center\">\n";
+		}	  
+	}
 
-    // if ($count == 1) {
-    //   echo '<div class="row">';
-    // }
-    echo '<div class="small-6 columns medium-4 portfolio-piece end"><img src="img/' . $work["path"] . '/' . $work["thumb"]. '"></div>';
-    //echo '<div class="small-6 columns medium-3 portfolio-piece"><img class="scale-with-grid" src="http://placehold.it/500x400&text='. $count .'"></div>';
+	echo "\t"."</div>";	
 
-}
-echo "</div>";
 ;?>
-
-
 
 <?php include 'inc/footer.php';?>

@@ -1,9 +1,20 @@
+.center { text-align: center; }
+
 .portfolio-piece {
-	margin-bottom: rem-calc(30);
+	margin-bottom: rem-calc(20);
 }
 
 .scale-with-grid {
 	height: auto;
 	width: 100%;
 	
+}
+
+nav {
+	text-align: center;
+	ul li {
+		display: inline;
+		list-style: none;
+		margin-right: 0.25em;
+	}
 }
