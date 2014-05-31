@@ -1,0 +1,101 @@
+@import 'bourbon/bourbon';
+
+
+body {
+	background: silver;	
+	font-family: "Futura LT Book";
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: 900;
+	text-align: center;
+	color: white;
+	letter-spacing: 5px;
+}
+
+a {
+	color: white;
+}
+
+.center {
+	margin: 20px;
+	display: inline-block;
+	background: gray;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.outer {
+	position: absolute;
+}
+
+.inner {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	@include transition(all .5s ease-in-out);
+
+	&:hover {
+	@include transition(all .5s ease-in-out);
+	@include transform(translateX(-200px));	
+	}
+}
+	
+.left {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+	
+.right {
+	width: 200px;
+	height: 200px;
+	float: left;	
+}
+	
+#red {
+	background-color: red;
+}
+
+#yellow {
+	background-color: yellow;
+	color: black;
+}
+
+#brown {
+	background-color: #6F4E37;
+}
+
+#green {
+	background-color: green;
+}
+
+#orange {
+	background-color: orange;
+}
+
+#black {
+	background-color: black;
+}
+
+#pink {
+	background-color: #F660AB;
+}
+
+#gray {
+	background-color: gray;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#tan {
+	background-color: tan;
+	color: black;
+}
+
+
+
+

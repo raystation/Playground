@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>hover test</title>
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<style>
+
+	* {
+			-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	}
+
+	.wrapper {
+		width: 200px;
+		height: 200px;
+		overflow: hidden;
+		display: inline-block;
+	}
+
+	.outer, .inner {
+		width: 200px;
+		height: 200px;
+		position: absolute;
+	  padding: 20px;
+	  color: white;
+	  -webkit-transition: all 0.5s ease-in-out;
+	  -moz-transition: all 0.5s ease-in-out;
+	  transition: all 0.5s ease-in-out; 
+	}
+
+	.wrapper:hover .inner {
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    transform: translateX(200px);
+	}
+
+	.outer { background-color: red; }
+	.inner { background-color: lime; }
+
+	</style>
+	
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="outer"><h1>hi</h1></div>
+		<div class="inner"><h1>pop</h2></div>
+	</div>
+
+	<div class="wrapper">
+		<div class="outer"><h1>january</h1></div>
+		<div class="inner"><h1>june</h2></div>
+	</div>
+
+</body>
+
+</html>

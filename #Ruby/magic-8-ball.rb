@@ -2,6 +2,10 @@
 # will randomly choose a number depending on the number of items in the array, and prints it to the screen. 
 # loops until you say exit
 
+def clear
+	system "clear"
+end
+
 fortunes = [
 	"The tides are turning...",
 	"Look for new opportunities in pyramid schemes.",
@@ -19,23 +23,25 @@ fortunes = [
 ]
 count=fortunes.length
 
-system "clear"
+clear
 puts "MAGIC 8 BALL"
 puts "========================"
 action="shake"
+
 loop do
 	puts "type 1 to find your fortune or 2 to exit"
+
 	loop do 
 		action=gets.chomp.to_i
 		break if action==1
 		break if action==2
 		puts "ERROR. type 1 to find your fortune or 2 to exit"
 	end
-	break if action==2
 
+	break if action==2
 
 	number=rand(0...count)
 	puts fortunes[number]
 
 end 
-system "clear"
+clear

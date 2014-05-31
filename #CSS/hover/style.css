@@ -1,0 +1,72 @@
+.outer, .inner {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+.outer {
+	position: relative;
+	background-image: url("../../maladof5/img/anticipated-ruins/01.jpg");
+}
+
+.outer:hover .inner {
+	background-color: rgba(0,0,0,.5);
+	,-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.outer:hover .button {
+	/*color: rgba(255,255,255,1);*/
+	opacity: 1;
+	,-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;	
+}
+
+
+.title {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(100,200,100,0.1);
+	,-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.futura {
+	font-family: "Futura LT Book";
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: 900;
+	color: white;
+}
+
+.button {
+	/*color: rgba(255,255,255,0);*/
+	color: white;
+	opacity: 0;
+	width: 80%;
+	height: 10%;
+	border: 2px solid white;
+	background-color: silver;
+	margin: 0 auto;
+	,-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;	
+}

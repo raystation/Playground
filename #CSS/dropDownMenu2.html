@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>drop down menu</title>
+
+<style type="text/css">
+
+	li {
+		display:inline;
+		background: silver;
+		padding: 5px;
+	}
+
+	nav ul ul {
+	display: none;
+	}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+
+	nav ul:after {
+		content: ""; clear: both; display: block;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Tutorials</a>
+				<ul>
+					<li><a href="#">Photoshop</a></li>
+					<li><a href="#">Illustrator</a></li>
+					<li><a href="#">Web Design</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Articles</a>
+				<ul>
+					<li><a href="#">Web Design</a></li>
+					<li><a href="#">User Experience</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Inspiration</a></li>
+		</ul>
+	</nav>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Tutorials</a>
+				<ul>
+					<li><a href="#">Photoshop</a></li>
+					<li><a href="#">Illustrator</a></li>
+					<li><a href="#">Web Design</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Articles</a>
+				<ul>
+					<li><a href="#">Web Design</a></li>
+					<li><a href="#">User Experience</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Inspiration</a></li>
+		</ul>
+	</nav>
+
+</body>
+
+</html>
