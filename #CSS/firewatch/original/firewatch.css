@@ -1,0 +1,671 @@
+/* Start small. These styles apply to everything. */
+
+*
+{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	color: inherit;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: normal;
+	
+}
+
+body
+{
+	background-color: rgb(45, 17, 45);
+	color: #c9293e;
+	font-family: 'Verlag A', 'Verlag B';
+	font-weight: 400;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+
+}
+
+h1#firewatchLogo:before
+{
+	background: url("images/firewatch.png");
+	background-size: 392px 144px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 144px;
+	margin: 0 auto;
+	margin-top: 125px;
+	display: block;
+	content: " ";
+}
+
+header#canopy
+{
+	display: table;
+	width: 100%;
+	height: 839px;
+	background-color: rgb(254, 220, 200);
+	zoom: 0.45;
+	margin-bottom: 70px;
+}
+
+#canopy:before,
+#canopy:after
+{
+	display: table-cell;
+	content: " ";
+	min-height: 839px;
+	background-repeat: repeat-x;
+}
+
+h1#firewatchLogo
+{
+	display: table-cell;
+	background-image: url("images/canopy-middle.png");
+	background-repeat: no-repeat;
+	background-size: 1610px 455px;
+	background-position: 50% 100%;
+	width: 1610px;
+	min-height: 839px;
+	color: transparent;
+	text-indent: -9999px;
+
+}
+
+#canopy:before
+{
+	background-image: url("images/canopy-left.png");
+	background-position: right bottom;
+	background-size: 481px 422px;
+}
+
+#canopy:after
+{
+	background-image: url("images/canopy-right.png");
+	background-position: left bottom;
+	background-size: 478px 384px;
+}
+
+h2, h3, h4
+{
+	margin: 0px;
+	text-align: center;
+	font-weight: normal;
+}			
+h2
+{
+	font-size: 23px;
+	line-height: 3.2em;
+	color: #7d0032;
+}
+h3
+{
+	font-size: 27px;
+	line-height: 3.2em;
+	margin-top: .4em;
+	color: #c9293e;
+}
+h4
+{
+	font-size: 31px;
+	line-height: 3.2em;
+	color: #f97c49;
+}
+
+h1#firewatchLogo2
+{
+	background: url("images/firewatch-2.png");
+	background-size: 351px 131px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 131px;
+	margin: 0 auto;
+	margin-top: 90px;
+	margin-bottom: 40px;
+	text-indent: -99999px;
+	color: transparent;
+	zoom: .75;
+}
+
+h2#subtitle
+{
+	font-size: 18.2px;
+	line-height: 2.4em;
+	margin-bottom: 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #f97c49;
+}
+	h2#subtitle a, h2#subtitle a:link, h2#subtitle a:visited {
+		font-weight: inherit;
+	}
+p#intro
+{
+	font-size: 24px;
+}
+
+
+div.two-column
+{
+
+}
+
+p
+{
+	font-size: 16px;
+	line-height: 1.3em;
+	margin-bottom: 1.2em;
+}
+#understory>div>p.nonparagraph {
+		margin-top: -1.2em;
+	}
+
+div.kicker
+{
+	color: #ff6c3f;
+	margin-top: 1.2em;
+	padding-bottom: 1.2em;
+}
+
+section#understory,
+section#duff
+{
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+
+section#understory
+{
+	padding-top: 6em;
+}
+
+hr#forest
+{
+	background-repeat: no-repeat;
+	background-size: 1953px 289px;
+	background-position: center center;
+	background-image: url("images/forest-transparent2.png");
+	height: 289px;
+	border: 0;
+	zoom: 0.46;
+	margin-top: 3em;
+	margin-bottom: 4em;
+	clear: both;
+}
+
+hr
+{
+	background-repeat: no-repeat;
+	background-size: 566px 3px;
+	background-position: center center;
+	background-image: url("images/hr.png");
+	width: 100%;
+	height: 3px;
+	border: 0;
+	zoom: 0.46;
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+
+#duff
+{
+	text-align: center;
+	color: #7d0031;
+	padding-top: 1.2em;
+	height: 1em;
+}
+
+footer
+{
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 3em;
+	padding-left: .5em;
+	padding-right: .5em;
+	margin-top: 6em;
+	color: #7d0031;
+}
+footer p
+{
+	font-size: 11px;	
+}
+
+.logo
+{
+	display: inline-block;
+	background-repeat: no-repeat;
+	margin: 0px 25px 2em 35px;
+	color: transparent;
+	text-indent: -9999px;	
+}
+
+#logoCampoSanto
+{
+	width: 101px;
+	height: 55px;
+	background-size: 101px 55px;
+	background-image: url("images/logo-camposanto.png");				
+	vertical-align: middle;
+}
+
+#logoPanic
+{
+	width: 44px;
+	height: 55px;
+	background-size: 44px 46px;
+	background-image: url("images/logo-panic.png");		
+	background-position: center 0px;		
+	vertical-align: middle;
+}
+
+.well
+{
+	zoom: 0.45;
+}
+
+section#links
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 2em 0 6em 0;
+}
+
+#linkBlog
+{
+	display: block;
+	min-height: 30px;
+	font-size: 24px;
+	font-weight: bold;
+	padding-left: 40px;
+	background: url(images/skull.png) 13px 2px no-repeat;
+	background-size: 29px 30px;
+}
+#linkBlog:hover
+{
+	color: #ff6c3f !important;
+}
+
+#linkMerchandise, #linkFAQ
+{
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 105px;
+	color: #fb7d49;	
+}
+#linkMerchandise
+{
+	background: url(images/merchandise-2.png) 31px center no-repeat;
+	background-size: 63px 54px;	
+	min-height: 46px;
+	padding-top: 10px;
+	margin-bottom: 30px;
+}
+#linkFAQ
+{
+	background: url(images/faq.png) 45px center no-repeat;
+	background-size: 37px 48px;	
+	min-height: 38px;
+	padding-top: 18px;
+}
+
+#linkMerchandise:hover, #linkFAQ:hover
+{
+	color: #ffdbc6 !important;	
+}
+
+/* FAQ */
+
+#firewatchFaq, #firewatchThanks
+{
+	text-align: left;
+}
+#firewatchFaq h2, #firewatchThanks h2
+{
+	text-align: left;
+	color: #ff6c3f;
+	line-height: 1.2em;
+	margin-top: 1.5em;
+	margin-bottom: .5em;
+}
+#firewatchFaq main, #firewatchThanks main
+{
+	padding: 0px 10px;
+}
+
+#firewatchFaq header
+{
+	background: url("images/title-faq.png");
+	background-size: 134px 54px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	height: 54px;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+	text-indent: -99999px;
+	color: transparent;
+}
+
+#firewatchThanks header
+{
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+#firewatchFaq #linkHome, #firewatchThanks #linkHome
+{
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	padding-left: 70px;
+	color: #fb7d49;	
+	background: url(images/home.png) 10px center no-repeat;
+	background-size: 48px 46px;	
+	min-height: 46px;
+	width: 170px;
+	padding-top: 8px;
+	margin: 5em auto 4em auto;
+}
+#linkHome:hover
+{
+	color: #ffdbc6 !important;	
+}
+
+#firewatchFaq p a:link, #firewatchFaq p a:visited {
+	color: #d94342;
+	border-bottom: 1px dotted #751439;
+}
+	#firewatchFaq p a:hover {
+		color: #ff6c3f;
+		border-color: #ff6c3f;
+	}
+
+
+/* Email signup */
+
+#signup
+{
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+#signup label
+{
+	display: none;
+}
+
+#signup, #signup form, #signup input, #signup button
+{
+	font-family: 'Verlag A', 'Verlag B';
+	font-weight: 400;
+	font-size: 16px;
+    -webkit-appearance: none;	
+}
+
+#signup #fieldEmail, #signup #fieldName, #signup button
+{
+	display: inline-block;
+	margin: 0 5px;
+	border: 0;
+	border-radius: 2px;
+	padding: 4px 8px;
+}
+#signup #fieldEmail, #signup #fieldName
+{
+	background: #520331;
+	color: #fddcc9;
+}
+#signup #fieldEmail
+{
+	width: 150px;
+}
+#signup #fieldName
+{
+	width: 100px;
+}
+
+#signup button
+{
+	margin-top: 25px;
+	background: #fc5944;
+	color: #2d122c;
+}
+#signup button:active
+{
+	background: #fedbc7;
+}
+
+#signup input::-webkit-input-placeholder {
+   color: #915155;
+}
+
+#signup input:-moz-placeholder { /* Firefox 18- */
+   color: #915155;
+}
+
+#signup input::-moz-placeholder {  /* Firefox 19+ */
+   color: #915155; 
+}
+
+#signup input:-ms-input-placeholder {  
+   color: #915155;
+}
+
+/* Thanks */
+
+#firewatchThanks header h1
+{
+	font-weight: 800;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 60px;
+	color: #f66a47;
+}
+
+
+/* Bigger than mobile: wider than 380px */
+
+@media screen and (min-width: 380px)
+{
+
+	header#canopy
+	{
+		zoom: 0.85;
+	}
+	
+	#merchandise
+	{
+		zoom: 0.85;
+	}
+	
+	div.two-column
+	{
+
+	}
+	
+	section#understory,
+	section#duff
+	{
+		margin: 0 auto;
+	}
+	
+	p
+	{
+		font-size: 16px;	
+	}
+	#understory>div>p.nonparagraph {
+		margin-top: -1.2em !important;
+	}
+	
+	hr#forest
+	{
+		zoom: 0.85;
+		margin-top: 4em;
+		margin-bottom: 6em;
+	}
+	
+	hr
+	{
+		zoom: 0.85;
+	}
+	
+	h2#subtitle
+	{
+		font-size: 35px;
+		line-height: 2.4em;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+
+	
+	footer p
+	{
+		font-size: 15px;
+	}
+	
+	h1#firewatchLogo2
+	{
+		zoom: .85;
+	}
+	
+	#firewatchFaq header, #firewatchThanks header
+	{
+		margin-top: 6em;
+		margin-bottom: 6em;
+	}
+}
+
+/* Full-width content: wider than 500px */
+
+@media screen and (min-width: 500px)
+{
+
+	header#canopy
+	{
+		zoom: 1;
+	}
+	h2#subtitle {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	#merchandise
+	{
+		zoom: 1;
+	}
+	
+	div.two-column
+	{
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		-ms-column-count: 2;
+		-o-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 2em;
+		-moz-column-gap: 2em;
+		-ms-column-gap: 2em;
+		-o-column-gap: 2em;
+		column-gap: 2em;
+		widows: 3;
+	}
+	#understory>div>p.nonparagraph {
+		margin-top: -1.2em;
+	}
+	
+	hr#forest
+	{
+		zoom: 1;
+		margin-top: 6em;
+		margin-bottom: 8em;
+	}
+	
+	
+	section#understory,
+	section#duff,
+	section.generic
+	{
+		width: 560px;
+		margin: 0 auto;
+		padding: 0 40px 0 10px;
+	}
+	
+	hr
+	{
+		zoom: 1;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	
+	h1#firewatchLogo2
+	{
+		zoom: 1;
+	}
+	
+	#linkBlog
+	{
+		display: inline-block;
+		padding-left: 40px;
+		background-position: 0 center;
+	}
+	
+	#linkMerchandise, #linkFAQ
+	{
+		display: block;
+		float: left;
+		clear: none;
+		width: 165px;
+		padding-left: 105px;
+	}
+	#linkMerchandise
+	{
+		margin: 0px;
+	}
+	#linkFAQ
+	{
+		background-position: 50px center;
+		margin: 0px;
+	}
+	#firewatchFaq main, #firewatchThanks main
+	{
+		width: 560px;
+		margin: 0px auto;
+		padding: 0px;
+	}
+	
+	#signup button
+	{
+		margin-top: 0px;
+	}
+}
+
+/* Retina Devices */
+
+@media screen and (-webkit-device-pixel-ratio: 2)
+{
+
+	h1#firewatchLogo:before { background-image: url("images/firewatch@2x.png") }
+	
+	h1#firewatchLogo 		{ background-image: url("images/canopy-middle@2x.png"); }
+	#canopy:before			{ background-image: url("images/canopy-left@2x.png"); }
+	#canopy:after 			{ background-image: url("images/canopy-right@2x.png"); }
+	
+	h1#firewatchLogo2 		{ background-image: url("images/firewatch-2@2x.png"); }
+							
+	hr#forest				{ background-image: url("images/forest-transparent2@2x.png"); }
+							
+	#logoCampoSanto 		{ background-image: url("images/logo-camposanto@2x.png"); }
+	#logoPanic 				{ background-image: url("images/logo-panic@2x.png"); }
+							
+	hr 						{ background-image: url("images/hr@2x.png"); }
+	
+	#linkBlog				{ background-image: url("images/skull@2x.png"); }
+	#linkMerchandise		{ background-image: url("images/merchandise-2@2x.png");}
+	#linkFAQ				{ background-image: url("images/faq@2x.png"); }
+
+	#firewatchFaq header	{ background-image: url("images/title-faq@2x.png"); }
+
+	#linkHome				{ background-image: url("images/home@2x.png"); }
+}

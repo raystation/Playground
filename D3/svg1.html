@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>svg</title>
+	<script type="text/javascript" src="d3.v3.min.js"></script>
+</head>
+<body>
+	<h1>svg</h1>
+
+	<script>
+		var w = 500;
+		var h = 50;
+		var fill = "red";
+
+		var dataset = [ 5, 10, 15, 20, 25 ];
+
+		var svg = d3.select("body")
+      .append("svg")
+      .attr("width", w)   // <-- Here
+      .attr("height", h) // <-- and here!
+      .attr("fill", fill);
+
+    svg.selectAll("circle")
+	    .data(dataset)
+	    .enter()
+	    .append("circle");
+
+		var circles = svg.selectAll("circle")
+		   .data(dataset)
+		   .enter()
+		   .append("circle");	    
+      
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

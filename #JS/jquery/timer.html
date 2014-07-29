@@ -21,7 +21,7 @@
 <body>
 
 	<div id="message">
-		<h1>I'm a message.</h1>
+		<h1>don't blink.</h1>
 	</div>
 
 
@@ -30,7 +30,7 @@
 	<script>
 		console.log('script start');
 		// setInterval(function(){alert("Hello")},3000);
-		setInterval(function(){hideShow()},3000);
+		setInterval(function(){hideShow()},1000);
 		
 		function hideShow() {
 			$( "#message" ).fadeOut( 'slow' ).fadeIn( "slow" );

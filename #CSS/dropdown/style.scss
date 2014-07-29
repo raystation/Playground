@@ -1,0 +1,62 @@
+@import "../../normalize";
+
+.nospace {
+    padding:0;
+    margin: 0;	
+}
+
+body {
+	background-color: whitesmoke;
+	padding-top: 40px;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+nav {
+	padding-bottom: 10px;
+}
+
+/*Initialize*/
+ul#menu, ul#menu ul.sub-menu {
+    padding:0;
+    margin: 0;
+	  -webkit-transition: all 1s false;
+	  -moz-transition: all 1s false false;
+	  -o-transition: all 1s false false;
+	  transition: all 1s;
+}
+ul#menu li, ul#menu ul.sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+/*Link Appearance*/
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    text-decoration: none;
+    color: #fff;
+    background: #666;
+    padding: 5px;
+    display:inline-block;
+}
+/*Make the parent of sub-menu relative*/
+ul#menu li {
+    position: relative;
+}
+/*sub menu*/
+ul#menu li ul.sub-menu {
+    display:none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100px;
+}
+ul#menu li:hover ul.sub-menu {
+    display:block;
+	  -webkit-transition: all 1s false;
+	  -moz-transition: all 1s false false;
+	  -o-transition: all 1s false false;
+	  transition: all 1s;    
+}

@@ -13,7 +13,7 @@
 			text-align: center;
 			font-family: "Futura LT Book";
 			text-transform: uppercase;
-			font-size: 60px;
+			font-size: 80pt;
 			font-weight: 900;
 		}
 
@@ -30,19 +30,26 @@
 			var h=today.getHours();
 			var m=today.getMinutes();
 			var s=today.getSeconds();
+
 			// add a zero in front of numbers<10
 			m=checkTime(m);
 			s=checkTime(s);
+
+			if ( h==0 ) { var h = 12; };
+
+			//prints out the time in standard format
 			document.getElementById('txt').innerHTML="<p>"+h+":"+m+":"+s+"</p>";
-			setTimeout(function(){startTime()},500);
+
+			//setTimeout() function allows code to be executed a set time after some trigger, such as when the page has loaded or a button is pressed. 
+			setTimeout( function(){startTime()} ,500 );
 		}
 
 		function checkTime(i) { 
 			if (i<10) { i="0" + i; }
-			return i; }
-
+			return i; 
+		}
 		
-		function countdown (count) { 
+		function countdown(count) { 
 			var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 			
 			function timer() {

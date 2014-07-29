@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grocery/Inventory</title>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+	<script>
+		var listInventory = [ "eggs","bacon","orange juice" ];
+	</script>
+
+	<div class="container">
+		<h1>lists</h1>
+		<script>
+			for ( var item in listInventory ) {
+				console.log( listInventory[item] );
+			}
+		</script>
+	</div>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

@@ -23,20 +23,17 @@
 	.outer {
 		height: 80%;
 		width: 100%;
-		overflow-x: scroll; 
-		overflow-y: hidden;
-
-		display: inline-block;
+		overflow: auto;
+		white-space: nowrap;
 		background-color: silver;
 	}
 
 	.inner {
 		height: 100%;
-		width: 5000px;
 		overflow-y: hidden;
 	}
 
-	div img {
+	.inner img {
 		list-style-type: none;
 		height:100%
 	}
@@ -49,22 +46,32 @@
 
 	<div class="outer">
 		<div class="inner">
-			<img src="simcha.jpg">
-			<img src="sherlock2.jpeg">
-			<img src="llama-scarf.jpg">
-			<img src="Grumpy-Cat-01.jpg">
-			<img src="bkgPattern_blue.gif">
-			<img src="simcha.jpg">
-			<img src="sherlock2.jpeg">
-			<img src="Grumpy-Cat-01.jpg">
-			<img src="bkgPattern_blue.gif">		
-			<img src="simcha.jpg">
-			<img src="sherlock2.jpeg">
-			<img src="Grumpy-Cat-01.jpg">
-			<img src="bkgPattern_blue.gif">
+
+			<img id="img01" src="../img-sample/h02.jpg">
+			<img id="img02" src="../img-sample/h01.jpg">
+			<img id="img03" src="../img-sample/h03.jpg">
+			<img id="img04" src="../img-sample/h04.jpg">
+			<img id="img05" src="../img-sample/h05.jpg">
+			<img id="img06" src="../img-sample/sq01.jpg">
+			<img id="img07" src="../img-sample/sq02.jpg">
+			<img id="img08" src="../img-sample/sq03.jpg">
+			<img id="img09" src="../img-sample/sq04.jpg">
+
 		</div>
 	</div>
+
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, perferendis, rerum, quam, ratione laudantium obcaecati minima mollitia ex temporibus alias doloremque tempore praesentium accusamus porro nemo quia eos aperiam quae numquam beatae nulla autem repellendus explicabo quas dolores eum soluta?
+	</p>
+	
+	<script>
+		// var autoWidth=$(img01).width()+$("#img02").width()+$("#img03").width()+$("#img04").width()+$("#img05").width()+$("#img06").width()+$("#img07").width()+$("#img08").width()+$("#img09").width();
+		var img01 = $("#img01").width();
+		console.log(img01);
+		// $(".inner").width(autoWidth);
+	</script>
 
 </body>
 
 </html>
+

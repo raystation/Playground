@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script type="text/javascript" src="d3.v3.min.js"></script>
+	<link rel="stylesheet" href="../normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p>hello! d3</p>
+	<p>ipsum</p>
+	<p class="tomato">tomato</p>
+	<script>
+		d3.selectAll("p").style("color", "steelblue");
+		d3.select(".tomato").style("color", "tomato");
+		d3.select(".tomato").append("p").text("New paragraph!");
+	</script>
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

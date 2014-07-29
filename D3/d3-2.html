@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script type="text/javascript" src="d3.v3.min.js"></script>
+	<link rel="stylesheet" href="../normalize.css">
+	<link rel="stylesheet" href="style.css">
+
+	
+</head>
+<body>
+	<script>
+		var dataset = [ 5, 10, 15, 20, 25, 30 ];
+		d3.select("body").selectAll("p")
+            .data(dataset)
+            .enter()
+            .append("p")
+            .text(function(d) { return "I like " + d; })
+            .style("color", function(d) {
+            	if (d>15) 
+            	{
+            		return "purple";
+            	}
+            		else 
+            	{
+            		return "tomato";
+            	}
+            });
+
+	</script>
+
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hide test</title>
+	<style>
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.button {
+			background-color: tomato;
+			text-align: center;
+			padding: 5px;
+			margin-bottom: 10px;
+		}
+		.window {
+			background-color: pink;
+			text-align: center;
+			height: 600px;
+		}
+		.text {
+			font-size: 20pt;
+			font-family: Helvetica;
+			font-weight: 100;
+			background-color: silver;
+			padding: 5px;
+		}
+		.display-none {
+			display: none;			
+		}
+		.read-more {
+			padding: 2px;
+			background-color: silver;
+			width: 120px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="button">click</div>
+		<div class="read-more">read more</div>
+		<div class="text display-none">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, animi, quidem, cumque ullam molestiae sit sint porro cum architecto necessitatibus sunt pariatur quibusdam autem beatae amet fugiat tempore voluptatum facere delectus ex. Molestiae ab facere at amet explicabo unde eligendi veniam temporibus possimus natus! Excepturi, ipsa sapiente consectetur cum obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, obcaecati?		
+			</p>			
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, animi, quidem, cumque ullam molestiae sit sint porro cum architecto necessitatibus sunt pariatur quibusdam autem beatae amet fugiat tempore voluptatum facere delectus ex. Molestiae ab facere at amet explicabo unde eligendi veniam temporibus possimus natus! Excepturi, ipsa sapiente consectetur cum obcaecati! Lorem ipsum dolor sit.		
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, animi, quidem, cumque ullam molestiae sit sint porro cum architecto necessitatibus sunt pariatur quibusdam autem beatae amet fugiat tempore voluptatum facere delectus ex. Molestiae ab facere at amet explicabo unde eligendi veniam temporibus possimus natus! Excepturi, ipsa sapiente consectetur cum obcaecati! Lorem ipsum dolor sit amet, consectetur.			
+			</p>
+
+		</div>
+	</div>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$(".button").click(function() {
+				$(".window").fadeOut();
+			});
+			$(".read-more").click(function() {
+				$(".text").toggleClass('display-none');
+			});
+		});
+	</script>
+
+</body>
+</html>

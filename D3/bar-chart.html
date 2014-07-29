@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bar chart</title>
+	<script type="text/javascript" src="d3.v3.min.js"></script>
+	<style>
+		div.bar {
+			display: inline-block;
+			width: 20px;
+			height: 75px;   /* We'll override this later */
+			background-color: teal;
+			margin-right: 2px;
+		}
+	</style>
+</head>
+<body>
+	<h1>bar chart</h1>
+	<script>
+		
+		var dataset = [ ];
+		// var dataset = [ 25, 7, 5, 26, 11, 8];
+		
+		for (var i = 0; i < 25; i++) {           //Loop 25 times
+			var newNumber = Math.round(Math.random() * 30);  //New random number (0-30)
+			dataset.push(newNumber);             //Add new number to array
+		}
+
+		d3.select("body").selectAll("div")
+		.data(dataset)
+		.enter()
+		.append("div")
+		.attr("class", "bar")
+		.style("height", function(d){
+			var barHeight = d * 10;  //Scale up by factor of "x"
+			return barHeight + "px";
+		})
+		.style("background-color", function(d) {
+			return "rgb(0, 0, " + (d * 10) + ")";
+		})
+		;
+    
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

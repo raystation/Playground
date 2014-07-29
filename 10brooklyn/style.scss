@@ -1,0 +1,135 @@
+$bp-desktop: 						"only screen and (max-width: 959px)";
+$bp-tablet-portrait: 		"only screen and (min-width: 768px) and (max-width: 959px)";
+$bp-mobile: 						"only screen and (max-width: 767px)";
+$bp-mobile-landscape: 	"only screen and (min-width: 480px) and (max-width: 767px)";
+$bp-mobile-portrait:		"only screen and (max-width: 479px)";
+$bp-large:							"only screen and (min-width: 960px)";
+
+// ==================================================
+
+	@mixin visible {
+		background-color: yellow;
+	}
+	
+
+// ==================================================
+
+	.clear { margin: 0; padding: 0; }
+	.center { text-align: center; }	
+	.full-height { height: 100%; }
+
+// ==================================================
+
+
+	* {
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;	
+	}
+
+	body {
+		background-color: lighten(silver,30%);
+		padding-top: 40px;
+
+		@media #{$bp-mobile} {
+			background-color: white;
+		}
+	}
+
+	body, html {
+		height: 100%;
+	}
+
+	a {
+		text-decoration: none;
+		
+	}
+
+
+	.container {
+		position: relative;
+		padding: 10px;
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		margin-bottom: 50px;
+		background-color: white;
+
+		&:first-child {
+			margin-top: 30px;
+
+			@media #{$bp-mobile} {
+				margin-top: 0;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+		
+	hr {
+		width: 80%;
+		border: 1pt dashed black;
+	}
+
+	h1, h1 a:link, h1 a:visited {
+		text-align: center;
+		font-size: inherit;
+		font: bold 30pt Helvetica;	
+		color: steelblue;
+	}
+
+	.imgwrapper {
+		display: inline-block;
+		width: 75%;
+
+		@media #{$bp-mobile} {
+			width: 95%;
+		}
+	}
+
+	.textbox {	
+		background-color: lighten(lightblue,10%);
+		display: inline-block;
+		padding: 5px;
+		text-align: center;
+
+		> p {
+			margin: 0;
+		}
+
+		@media #{$bp-large} {
+			width: 25%;	
+			float: right;
+
+		}
+	}
+
+	.nav {
+		position: fixed;
+		top: 0;
+		background-color: rgba(black,.75);
+		color: white;
+		padding: 10px;
+		z-index: 99;
+		width: 100%;
+		text-align: center;
+		
+		ul {
+			list-style-type: none;
+			@extend .clear;
+
+			li {
+				display: inline-block;
+				margin-right: 5px;
+				&:last-child {
+					margin-right: none;
+				}
+
+				a {
+					color: white;
+				}
+			}
+		}
+	}
+
+

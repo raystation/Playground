@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bar chart</title>
+	<script type="text/javascript" src="d3.v3.min.js"></script>
+</head>
+<body>
+	<h1>bar chart</h1>
+	<script>
+		var dataset = [ 25, 72, 53, 26, 11, 8, 44, 88, 34, 43, 22, 11, 20, 12, 56,  ];
+		var w=1000;
+		var h=200;
+		
+		var svg = d3.select("body")
+			.append("svg")
+			.attr("width", w)
+			.attr("height", h)
+		
+		svg.selectAll("rect")
+			.data(dataset)
+			.enter()
+			.append("rect")
+			.attr("x", function(d, i) { return i * (w / dataset.length); })
+			.attr("y", 0)
+			.attr("y", function(d) { return h - d; })
+			.attr("width", 20)
+			.attr("height", function(d) { return d * 1.25; } )
+			.attr("fill", function(d) { return "rgb(0, 0, " + (d * 10) + ")"; })
+		;
+    
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

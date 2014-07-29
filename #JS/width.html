@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>width()</title>
+	<style>
+		img {
+			width: 600px;
+			margin-right:10px;
+		}
+	</style>	
+</head>
+<body>
+	<img id="obama" src="../img-sample/h01.jpg" alt="">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+		var width = $("#obama").width();
+		console.log(width);
+		$("#obama").width(800);
+	</script>
+</body>
+</html>
