@@ -1,5 +1,9 @@
 $button-color: lighten(black,20%);
 $operator-color: darken(orange,35%);
+$size: 75px;
+$button-spacing: 2px;
+
+*{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body {
 	margin: 0;
@@ -9,31 +13,30 @@ body {
 	font-size: 25px;
 	font-weight: 900;
 	letter-spacing: 3px;
-	margin-left: 1em;
 	background-color: black;
 	color: white;
 }
 
 .container {
-	width: 100%;
-	max-width: 900px;	
+	width: 400px;
+	max-width: 900px;
 	margin: 0 auto;
-	// background-color: whitesmoke;
+	// background-color: gray;
+	text-align: center;
 }
-
-$size: 50px;
 
 .buttons {
 	margin: 0 auto;
 	> li {
 		padding: 5px;
-		margin: 5px;
+		margin: $button-spacing;
 		display: inline-block;
 		width: $size;
 		height: $size;
+		line-height: $size*0.85;
 		background-color: $button-color;
 		color: lighten($button-color,50%);
-		border-radius: 5px;
+		// border-radius: 5px;
 		&:hover {
 			background-color: lighten($button-color,10%);
 			-webkit-transition: all .3s;
@@ -49,14 +52,23 @@ li.operator {
 	&:hover { background-color: lighten($operator-color,10%); }
 }
 
+li.double {
+	width: 2*$size+2*$button-spacing !important;
+}
+
 #answer {
-	border-radius: 5px;
+	// border-radius: 5px;
+	font-size: 150%;
+	text-align: left;
 	background-color: $button-color;
 	height: $size;
-	width: 8*$size;
+	width: 4 * $size + 6 * $button-spacing;
 	padding: 5px;
-	margin: 5px;
-	margin-bottom: 10px;
+	// margin: 5px;
+	margin: 0 auto;
+	margin-bottom: 2*$button-spacing;
+	margin-top: $button-spacing;
+	padding-left: 0.25em;
 }
 
 #sums {

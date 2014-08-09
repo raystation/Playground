@@ -8,34 +8,41 @@
 <body>
 	
 	<div class="container">
-		<p>calculator</p>
+		<h2>calculator</h2>
 
+		<div id="answer"></div>
+		<div class="buttons">
+			<li class="operator" onclick="reset()">c
+			<li class="operator">+/-
+			<li class="operator">%
+			<li class="operator" onclick="operator('/')">÷
+		</div>
 		<div class="buttons">
 			<li onclick="inputNumber('1')">1
 			<li onclick="inputNumber('2')">2
 			<li onclick="inputNumber('3')">3
-			<li onclick="inputNumber('4')">4
-			<li onclick="inputNumber('5')">5
+			<li class="operator" onclick="operator('x')">&times;
 		</div>
 		<div class="buttons">
+			<li onclick="inputNumber('4')">4
+			<li onclick="inputNumber('5')">5
 			<li onclick="inputNumber('6')">6
+			<li class="operator" onclick="operator('-')">&ndash;
+		</div>
+		<div class="buttons">			
 			<li onclick="inputNumber('7')">7
 			<li onclick="inputNumber('8')">8
 			<li onclick="inputNumber('9')">9
-			<li onclick="inputNumber('0')">0
-			<!-- <li class="operator" onclick="getNumber('.')">. -->
-			<!-- <li class="operator" onclick="operator('%')">% -->
+			<li class="operator" onclick="operator('+')">+
 		</div>
 		<div class="buttons">
-			<li class="operator" onclick="operator('+')">+
-			<li class="operator" onclick="operator('-')">&ndash;
-			<li class="operator" onclick="operator('x')">&times;
-			<li class="operator" onclick="operator('/')">÷
+			<li class="double" onclick="inputNumber('0')">0
+			<li class="operator">.
 			<li class="operator" onclick="calculate()">=
-			<li class="operator" onclick="reset()">c
+			<!-- <li class="operator" onclick="getNumber('.')">. -->
+			<!-- <li class="operator" onclick="operator('%')">% -->
 			<!-- <li class="operator" onclick="reset_all()">ac -->
 		</div>		
-		<div id="answer"></div>
 		<!-- <div id="sums"></div> -->
 	</div>
 	
