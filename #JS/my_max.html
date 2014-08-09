@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>colors</title>
+	<style>
+		body {
+			font-family: "Futura LT Book";
+			text-transform: uppercase;
+			font-size: 25px;
+			font-weight: 900;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div id="myDiv">
+		<p>Build a function my_max() which takes an array and returns the maximum number.</p>
+	</div>
+
+	<script>
+		var array,
+				sorted;
+
+		var d1=document.getElementById('myDiv');
+		array=[1,5,8,10,45,88,238,32,999];
+
+		function sortfunction(a, b){ return (a - b) } 
+		//causes an array to be sorted numerically and ascending		
+
+		function my_max(array){
+			
+			sorted = array.sort(sortfunction).reverse();
+			d1.insertAdjacentHTML('beforeend', '<p>'+array+'</p>');
+			d1.insertAdjacentHTML('beforeend', '<p>'+sorted[0]+'</p>');
+		}
+		
+		my_max(array);
+
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
+
+</body>
+</html>

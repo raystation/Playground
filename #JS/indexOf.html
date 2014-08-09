@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>colors</title>
+</head>
+<style>
+	#mydiv {
+		padding: 0.5em 1em;
+		background-color: yellow;
+		font-family: "Futura LT Book";
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 900;
+		text-align: center;
+		/*position: absolute;*/
+		margin: 0 auto;
+	}
+</style>
+<body>
+
+	<div id="mydiv">
+		Lorem ipsum dolor sit.
+	</div>
+
+	<script>
+		var word = "Raymond";
+		var myDiv = document.getElementById('mydiv');
+		if (word.indexOf("R") !=-1) { 
+			myDiv.innerHTML=word + " has a letter R in it";
+		} else {
+			myDiv.innerHTML=word + " does not have a letter R in it";
+		};
+
+		function display_word(){
+			this.innerHTML=word;
+		}
+
+		myDiv.onclick = display_word; //why no parenthesis?
+	</script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

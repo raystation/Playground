@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vowel-count</title>
+</head>
+<body>
+	<p>vowel count</p>
+	<p>Build a function vowel_count() which takes a string and returns the number of vowels (AEIOUY).</p>
+
+	<script>
+
+		function vowel_count(originalword){
+			var letterArray=new Array();
+			// console.log(originalword);
+			word = originalword.replace(/\s+/g, '').toLowerCase();
+
+			var length=word.length;
+			// console.log(length);
+
+			for (var i = 0; i < word.length; i++) {
+
+				if (word.charAt(i) == "a" || word.charAt(i) == "e" || word.charAt(i) == "i" || word.charAt(i) == "o" || word.charAt(i) == "u" || word.charAt(i) == "y") {
+					letterArray.push(word.charAt(i));
+					// console.log( word.charAt(i) );
+				}
+			}
+			console.log("The "+letterArray.length+" vowels in "+originalword+" are "+letterArray+". ");
+			return letterArray.length;
+		};
+
+		vowel_count("Iron Man");
+		vowel_count("Captain America");
+		vowel_count("Rocket Raccoon");
+
+	</script>
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>colors</title>
+</head>
+<style>
+	#mydiv {
+		padding: 0.5em 1em;
+		background-color: yellow;
+		font-family: "Futura LT Book";
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 900;
+		text-align: center;
+		/*position: absolute;*/
+		margin: 0 auto;
+	}
+</style>
+<body>
+
+	<script>
+		var array = ["orange", "blue", "red", "yellow", "white", "black"];
+		var text = "Lorem ipsum dolor.";
+	</script>
+
+	<div id="mydiv" onclick="display_n();">
+		<script>
+			
+			document.getElementById('mydiv').innerHTML = text + " is good";
+		</script>
+	</div>
+
+	<script>
+		function display_n(){
+			var myDiv = document.getElementById('mydiv');
+			number = Math.floor(Math.random() * array.length ); 
+			myDiv.innerHTML = array[number];
+		}
+	</script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

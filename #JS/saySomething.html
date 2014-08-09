@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>colors</title>
+	<style>
+		body {
+			font-family: "Futura LT Book";
+			text-transform: uppercase;
+			font-size: 25px;
+			font-weight: 900;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div id="myDiv">
+		<p>Say Something to the function saySomething in the console.</p>
+	</div>
+
+	<script>
+		function ss(something){
+			if (typeof something == 'undefined'){ something="hello"};
+			console.log(something);
+			document.getElementById('myDiv').innerHTML=something;
+			return something;
+		}
+
+	</script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
+
+</body>
+</html>

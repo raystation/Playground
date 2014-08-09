@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calculon</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="container">
+		<p>calculator</p>
+
+		<div class="buttons">
+			<li onclick="inputNumber('1')">1
+			<li onclick="inputNumber('2')">2
+			<li onclick="inputNumber('3')">3
+			<li onclick="inputNumber('4')">4
+			<li onclick="inputNumber('5')">5
+		</div>
+		<div class="buttons">
+			<li onclick="inputNumber('6')">6
+			<li onclick="inputNumber('7')">7
+			<li onclick="inputNumber('8')">8
+			<li onclick="inputNumber('9')">9
+			<li onclick="inputNumber('0')">0
+			<!-- <li class="operator" onclick="getNumber('.')">. -->
+			<!-- <li class="operator" onclick="operator('%')">% -->
+		</div>
+		<div class="buttons">
+			<li class="operator" onclick="operator('+')">+
+			<li class="operator" onclick="operator('-')">&ndash;
+			<li class="operator" onclick="operator('x')">&times;
+			<li class="operator" onclick="operator('/')">÷
+			<li class="operator" onclick="calculate()">=
+			<li class="operator" onclick="reset()">c
+			<!-- <li class="operator" onclick="reset_all()">ac -->
+		</div>		
+		<div id="answer"></div>
+		<!-- <div id="sums"></div> -->
+	</div>
+	
+	<script src="script2.js"></script>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
